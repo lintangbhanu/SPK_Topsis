@@ -82,7 +82,7 @@ Pastikan database dengan nama **topsis** sudah dibuat sebelum menjalankan aplika
 1. **Clone repository**
 
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/lintangbhanu/SPK_Topsis.git>
    cd spk_topsis
    ```
 
