@@ -1,33 +1,48 @@
-# Aplikasi Web SPK TOPSIS (Sistem Pendukung Keputusan)
+# Aplikasi Web SPK Pemilihan Pemain Esports Terbaik (Metode TOPSIS)
 
 ## Deskripsi
 
-Aplikasi Web **SPK TOPSIS** adalah sistem pendukung keputusan berbasis web yang dibangun menggunakan **CodeIgniter 4** dan **MySQL**. Aplikasi ini menerapkan metode **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** untuk membantu pengambilan keputusan multikriteria secara objektif dan terstruktur.
+Aplikasi Web **SPK Pemilihan Pemain Esports Terbaik** adalah sistem pendukung keputusan berbasis web yang dibangun menggunakan **CodeIgniter 4** dan **MySQL**. Aplikasi ini menerapkan metode **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** untuk membantu menentukan pemain esports terbaik berdasarkan sejumlah kriteria penilaian secara objektif dan terukur.
 
-Metode TOPSIS menentukan alternatif terbaik berdasarkan kedekatan dengan solusi ideal positif dan jarak terjauh dari solusi ideal negatif. Aplikasi ini cocok digunakan untuk berbagai studi kasus, seperti:
+Sistem ini dirancang untuk membantu **manajer tim esports, pelatih, maupun organisasi esports** dalam mengambil keputusan strategis, seperti pemilihan pemain inti, evaluasi performa pemain, atau rekrutmen pemain baru.
 
-- Pemilihan karyawan terbaik
-- Pemilihan supplier
-- Pemilihan mahasiswa berprestasi
-- Pemilihan lokasi terbaik
-- Dan kebutuhan pengambilan keputusan lainnya
+---
+
+## Tujuan Sistem
+
+- Membantu pengambilan keputusan pemilihan pemain esports terbaik
+- Mengurangi subjektivitas dalam penilaian pemain
+- Memberikan hasil perangkingan pemain berdasarkan perhitungan matematis
+
+---
+
+## Kriteria Penilaian (Contoh)
+
+Kriteria dapat disesuaikan dengan kebutuhan tim esports, antara lain:
+
+- Kill/Death/Assits Ratio (K/D)
+- Heropool
+- Average Damage / Contribution
+- Teamwork
+
+Setiap kriteria dapat diklasifikasikan sebagai **Benefit** atau **Cost** serta memiliki bobot sesuai tingkat kepentingannya.
 
 ---
 
 ## Fitur Utama
 
-- Manajemen data **kriteria** (benefit & cost)
-- Manajemen data **alternatif**
-- Input **nilai alternatif terhadap kriteria**
+- Manajemen data **pemain esports** (alternatif)
+- Manajemen **kriteria & bobot penilaian**
+- Input nilai performa pemain
 - Perhitungan otomatis metode **TOPSIS**:
 
-  - Normalisasi matriks
-  - Pembobotan
+  - Normalisasi matriks keputusan
+  - Normalisasi terbobot
   - Solusi ideal positif & negatif
   - Nilai preferensi
 
-- Perangkingan hasil keputusan
-- Tampilan hasil perhitungan yang informatif
+- Perangkingan pemain esports terbaik
+- Tampilan hasil perhitungan yang jelas dan informatif
 
 ---
 
@@ -67,7 +82,7 @@ Pastikan database dengan nama **topsis** sudah dibuat sebelum menjalankan aplika
 1. **Clone repository**
 
    ```bash
-   git clone <https://github.com/lintangbhanu/SPK_Topsis.git>
+   git clone <repository-url>
    cd spk_topsis
    ```
 
@@ -95,7 +110,6 @@ Pastikan database dengan nama **topsis** sudah dibuat sebelum menjalankan aplika
    ```
 
 6. Akses aplikasi melalui browser:
-   git pull origin main
 
    ```
    http://localhost:8080
@@ -120,14 +134,15 @@ composer.json
 
 ## Metode TOPSIS (Alur Singkat)
 
-1. Menentukan kriteria dan bobot
-2. Menyusun matriks keputusan
-3. Normalisasi matriks keputusan
-4. Normalisasi terbobot
-5. Menentukan solusi ideal positif dan negatif
-6. Menghitung jarak setiap alternatif
-7. Menghitung nilai preferensi
-8. Menentukan peringkat alternatif
+1. Menentukan pemain esports (alternatif)
+2. Menentukan kriteria dan bobot penilaian
+3. Menyusun matriks keputusan
+4. Normalisasi matriks keputusan
+5. Normalisasi terbobot
+6. Menentukan solusi ideal positif dan negatif
+7. Menghitung jarak setiap alternatif
+8. Menghitung nilai preferensi
+9. Menentukan peringkat pemain esports terbaik
 
 ---
 
@@ -149,15 +164,3 @@ composer.json
 - Folder **public/** adalah root aplikasi (document root web server)
 - Jangan arahkan web server ke root project secara langsung
 - Pastikan hak akses folder `writable/` sudah benar
-
----
-
-## Lisensi
-
-Proyek ini digunakan untuk keperluan akademik dan pengembangan sistem pendukung keputusan.
-
----
-
-## Nama Proyek
-
-**SPK_TOPSIS – Aplikasi Web Sistem Pendukung Keputusan Menggunakan Metode TOPSIS**
