@@ -1,0 +1,133 @@
+body.login-body {
+    background-image: url('../image/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    height: 100vh;
+}
+
+.form-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    padding-right: 10%;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dashboard-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../assets/image/dashboard-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 0;
+}
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: #08295b;
+    color: white;
+    position: fixed;
+    padding-top: 20px;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.sidebar h4 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sidebar a {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border-radius: 0 25px 25px 0;
+    margin: 0 10px 10px 10px;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    background-color: #0a3a8a;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 260px;
+    padding: 30px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 20;
+}
+
+.navbar {
+    background-color: #0a3a8a;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff !important;
+}
+
+.card {
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4a90e2, #357ABD);
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.2);
+}
+
+.card h5 {
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 0.9rem;
+}
+
+a.fas-fa-sign-out-alt{
+    margin-bottom: 40px;
+}
