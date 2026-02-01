@@ -93,7 +93,7 @@
                     <h5>Input Skor Kriteria per Role</h5>
                     <small class="text-muted">Bobot akan dihitung otomatis berdasarkan skor yang diinput</small>
                     <div class="alert alert-info mt-2 p-2">
-                        <small><i class="fas fa-info-circle"></i> <strong>Skor harus diisi angka 1-9:</strong> 1 = Sangat tidak penting, 9 = Sangat penting.</small>
+                        <small><i class="fas fa-info-circle"></i> <strong>Skor harus diisi angka 1-5:</strong> 1 = Sangat tidak penting, 5 = Sangat penting.</small>
                     </div>
                 </div>
                 <div class="card-body">
@@ -129,7 +129,7 @@
                                             <td><strong><?= esc($k['id_kriteria']) ?> - <?= esc($k['kriteria']) ?></strong></td>
                                             <?php foreach ($roles as $role): ?>
                                                 <td>
-                                                    <input type="number" step="1" min="1" max="9"
+                                                    <input type="number" step="1" min="1" max="5"
                                                            name="skor_<?= esc($role['id_role']) ?>_<?= esc($k['id_kriteria']) ?>"
                                                            value="<?= esc($skorMap[$role['id_role'] . '_' . $k['id_kriteria']] ?? 0) ?>"
                                                            class="form-control form-control-sm text-center" required>

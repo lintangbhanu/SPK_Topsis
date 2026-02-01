@@ -85,6 +85,11 @@ body.dashboard-body {
     text-decoration: none;
 }
 
+.sidebar a.active {
+    background-color: #0a3a8a;
+    border-left: 4px solid #fff;
+}
+
 .content {
     margin-left: 260px;
     padding: 30px;
@@ -128,6 +133,109 @@ body.dashboard-body {
     font-size: 0.9rem;
 }
 
-a.fas-fa-sign-out-alt{
+a.fas-fa-sign-out-alt {
     margin-bottom: 40px;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.mobile-menu-btn:focus {
+    outline: none;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .navbar .container-fluid {
+        justify-content: space-between;
+    }
+
+    /* Table responsiveness */
+    .table-responsive {
+        font-size: 0.8rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.5rem 0.25rem;
+        white-space: nowrap;
+    }
+
+    /* Card adjustments */
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-header .btn {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .content {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .table th,
+    .table td {
+        font-size: 0.7rem;
+        padding: 0.25rem;
+    }
+
+    .btn-sm {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+/* Overlay for mobile menu */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.mobile-overlay.active {
+    display: block;
 }
