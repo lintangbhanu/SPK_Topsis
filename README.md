@@ -97,7 +97,7 @@ Pastikan database dengan nama **topsis** sudah dibuat sebelum menjalankan aplika
    - Salin file `env` menjadi `.env`
    - Sesuaikan `baseURL` dan konfigurasi database
 
-4. **Migrasi database (jika tersedia)**
+4. **Migrasi database**
 
    ```bash
    php spark migrate
